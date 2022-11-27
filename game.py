@@ -5,6 +5,10 @@ def game(): # called from main
     character = make_character("Player name")
     achieved_goal = False
     while not achieved_goal:
+        """
+        Welcome to Gotham City, you are the world's most famous detective AKA Batman.
+        Gotham City is a dangerous and scary place and it's your job to keep people safe.
+        """
         // Tell the user where they are
         describe_current_location(board, character)
         direction = get_user_choice( )
