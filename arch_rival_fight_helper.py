@@ -19,7 +19,9 @@ def create_arch_rival_fight():
 
 def execute_fight(fight, character_points):
     symbol = fight['map_symbol'] + ' '
-    print(f"{symbol}You came to final challenge having {character_points} points.")
+    print(f"{symbol}You came to final challenge having {character_points} points. Joker stands alone in a warehouse"
+          f" awaiting your arrival with a crowbar in hand.\n He's terrorized Gotham City for long enough! It's time to"
+          f" put an end to this madness!")
     num_of_tasks = calc_num_of_tasks(character_points)
     print(f"{symbol}Based on your level you will be challenged with {num_of_tasks} tasks.")
     print(f"{symbol}You need to succeed in at least {num_of_tasks - 1} tasks to win the fight and the game.")
