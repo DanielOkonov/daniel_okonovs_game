@@ -1,5 +1,6 @@
 from unittest import TestCase
 import board_helper
+import mock
 
 
 class TestBoardHelper(TestCase):
@@ -41,3 +42,14 @@ class TestBoardHelper(TestCase):
         challenge = board_helper.get_challenge(board, (0, 1))
         self.assertEqual('test_challenge', challenge)
         self.assertIsNone(board[0][1])
+
+    @mock.patch('random.sample')
+    def test_challenges_at_board_created(self, random_call):
+        random_call.return_value = [1, 2, 3, 4, 5, 6]
+        test_num_of_rows = 6
+        test_num_of_columns = 7
+
+        board = board_helper.make_board(test_num_of_rows, test_num_of_columns)
+        self.assertIsNotNone(board[0][1])
+        self.assertIsNotNone(board[0][2])
+        self.assertIsNone(board[3][0])
