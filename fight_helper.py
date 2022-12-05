@@ -29,10 +29,10 @@ def create_fights():
          'points_acquired': 25,
          'points_lost': 15,
          'tasks': [('hit', 3, 1,
-                    'ToDo',
+                    'You knocked 4 of the thugs!',
                     'You missed a hit on one of the thugs! He pushes you off and laughs.'),
                    ('block', 2, 1,
-                    'ToDo',
+                    'You blocked a bat swing from a thug.',
                     'You miss a block and get hit with a bat! Your vision goes blurry as you fall to '
                     'your knees.')],
          'num_of_tasks_to_win': 2,
@@ -97,7 +97,7 @@ def execute_time_lapse_task(task, task_num, symbol):
     :param symbol: map symbol of the fight
     :precondition: must contain all fight attributes mentioned in the parameters
     :postcondition: determines whether task was accomplished in given time frame or not
-    :return: a boolean
+    :return: a boolean, True for win or False for lost
     """
     task_prefix = 'task_' + str(task_num) + ': '
     task_verb = task[0]

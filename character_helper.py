@@ -44,7 +44,7 @@ def add_points(character, points):
     :param points: an integer
     :precondition: character must be a string and points must be a positive integer
     :postcondtion: displays player's level status and calculated new total points
-    :return: player's level status
+    :return: message with player's level status change if any
     """
 
     cur_level = get_level(character['points'])

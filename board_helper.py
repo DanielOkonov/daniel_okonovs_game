@@ -90,7 +90,7 @@ def build_board_map(board, character_position, character_symbol):
     :param character_position: a tuple made up of a row and column
     :param character_symbol: the emoji representing the position of the character
     :precondition: parameters must have described expected values
-    :postcondition: a map of the board is printed
+    :postcondition: a map of the board is returned
     :return: a string representation of a map
     """
     chars_per_cell = 7
@@ -124,7 +124,7 @@ def try_move(board, character_position, user_choice):
     :param user_choice: a letter representing in which direction the character should move
     :precondition: parameters must have described expected values
     :postcondition: character will move to a new position within the map
-    :return: a boolean
+    :return: a tuple; first element is boolean flag for success, second element for new position or error message
     """
     message_format = "You are on the {direction}ern border of the Gotham city, cannot go further {direction}"
     if user_choice == 'N':

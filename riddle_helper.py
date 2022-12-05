@@ -40,7 +40,7 @@ def execute_challenge(riddle):
     :param riddle: one of the riddles from the create_riddles function
     :precondition: riddle passed must have all attributes
     :postcondition: prints the riddle and result of chosen answer
-    :return: points lost if incorrect riddle answer, points gained if correct riddle answer
+    :return: points gained if correct riddle answer
     """
 
     symbol = riddle['map_symbol'] + ' '
